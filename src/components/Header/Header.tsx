@@ -45,7 +45,7 @@ ${mQTabletUp}{
 
 
 const Header: React.FC<Props> = (props) => {
-    const {shadow} = props;
+    const { shadow } = props;
     return (
         <StyledHeader
             shadow={shadow}
@@ -56,7 +56,7 @@ const Header: React.FC<Props> = (props) => {
                 <span>Contact</span>
             </StyledNav>
         </StyledHeader>
-        );
+    );
 
 };
 
