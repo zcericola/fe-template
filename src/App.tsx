@@ -6,10 +6,12 @@ import StyledContainer from './lib/StyledContainer/StyledContainer';
 import StyledNav from './lib/StyledNav/StyledNav';
 import StyledMobileMenu from './lib/StyledMobileMenu/StyledMobileMenu';
 import Grid from './lib/Grid/Grid';
+import Column from './lib/Column/Column';
 import { primary, accent, accent2, headerHeight, shadow } from './lib/variables/variables';
 const { useEffect, useState } = React;
 
-interface Props { };
+interface Props {
+};
 
 const App: React.FC<Props> = (props) => {
     const bgGradient = `linear-gradient(${primary}, ${accent}, ${accent2})`;
@@ -19,7 +21,7 @@ const App: React.FC<Props> = (props) => {
     });
     const showShadowOnScroll = () => {
         if (window.scrollY > headerHeight) {
-           setDisplayState(true);    
+            setDisplayState(true);
         } else {
             setDisplayState(false);
         }
@@ -42,9 +44,15 @@ const App: React.FC<Props> = (props) => {
                 shadow={showShadow ? shadow : ''}
             />
             <Grid size={'md'}>
-
-                
-            </Grid> 
+                <Column></Column>
+                <Column></Column>
+                <Column></Column>
+            </Grid>
+            <Grid size={'md'}>
+                <Column></Column>
+                <Column></Column>
+                <Column></Column>
+            </Grid>
         </StyledContainer>
     );
 }

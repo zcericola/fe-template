@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 interface Props {
     size?: string;
+    children?: any;
 };
 
 const calcSize = (size: Props['size']) => {
@@ -19,8 +20,10 @@ const calcSize = (size: Props['size']) => {
 };
 
 const StyledGrid = styled.div`
+display: flex;
+flex-direction: row;
 height: 100px;
-position: absolute;
+position: relative;
 top: 200px;
 min-width: ${(props: Props) => calcSize(props.size)};
 border: 2px solid red;
